@@ -74,8 +74,12 @@ nav a:hover{
 
 .hero-logo{
     width: 500px;
-    max-width: 90%;
-    margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    object-fit: contain;
+    
 
 }
    
@@ -259,65 +263,95 @@ footer{
     cursor:pointer;
     color:#2e7d32;
 }
-@media (max-width: 768px) {
 
-   header{
-    padding:15px 20px;
-    position:fixed;
-}
+@media (max-width:768px){
 
-.menu-btn{
-    display:block;
-}
+    header{
+        padding:15px 20px;
+    }
 
-nav{
-    display:none;
-    position:absolute;
-    top:70px;
-    right:20px;
-    background:#fff;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    flex-direction:column;
-    min-width:180px;
-}
+    .logo{
+        font-size:22px;
+    }
 
-nav a{
-    margin:0;
-    padding:15px;
-    border-bottom:1px solid #eee;
-}
+    .menu-btn{
+        display:block;
+    }
 
-nav a:last-child{
-    border-bottom:none;
-}
+    nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:0 8px 20px rgba(0,0,0,.15);
+        flex-direction:column;
+        min-width:180px;
+    }
 
-#menu-toggle:checked ~ nav{
-    display:flex;
-}
+    nav a{
+        margin:0;
+        padding:15px;
+        border-bottom:1px solid #eee;
+    }
+
+    nav a:last-child{
+        border-bottom:none;
+    }
+
+    #menu-toggle:checked ~ nav{
+        display:flex;
+    }
+
+    .hero{
+        padding:120px 20px 50px;
+        min-height:auto;
     }
 
     .hero-logo{
-        width: 280px;
+        width:320px;
+        max-width:95%;
+        height:auto;
+        display:block;
+        margin:0 auto 30px;
+        object-fit:contain;
     }
 
     .hero-subtitle{
-        font-size: 20px;
-        padding: 0 15px;
+        font-size:20px;
+        padding:0 15px;
+        margin:15px 0 25px;
     }
 
     .btn{
-        padding: 10px 20px;
-        font-size: 14px;
+        padding:12px 25px;
+        font-size:15px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
     }
 
     .steps{
-        flex-direction: column;
-        align-items: center;
+        flex-direction:column;
+        align-items:center;
     }
 
     .step{
-        width: 90%;
-        max-width: 320px;
+        width:90%;
+        max-width:320px;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    section p{
+        font-size:16px;
     }
 }
