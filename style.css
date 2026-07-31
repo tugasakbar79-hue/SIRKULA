@@ -67,8 +67,6 @@ nav a:hover{
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-
-
 }
     
 
@@ -259,10 +257,12 @@ footer{
 
 .menu-btn{
     display:none;
-    font-size:30px;
+    font-size:32px;
     cursor:pointer;
     color:#2e7d32;
+    font-weight:bold;
 }
+
 
 @media (max-width:768px){
 
@@ -274,35 +274,26 @@ footer{
         font-size:22px;
     }
 
+    
     .menu-btn{
-        display:block;
-    }
+    display:block;
+}
 
-    nav{
-        display:none;
-        position:absolute;
-        top:70px;
-        right:20px;
-        background:#fff;
-        border-radius:12px;
-        box-shadow:0 8px 20px rgba(0,0,0,.15);
-        flex-direction:column;
-        min-width:180px;
-    }
+nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    flex-direction:column;
+    width:180px;
+}
 
-    nav a{
-        margin:0;
-        padding:15px;
-        border-bottom:1px solid #eee;
-    }
-
-    nav a:last-child{
-        border-bottom:none;
-    }
-
-    #menu-toggle:checked ~ nav{
-        display:flex;
-    }
+#menu-toggle:checked ~ nav{
+    display:flex;
+}
 
     .hero{
         padding:120px 20px 50px;
