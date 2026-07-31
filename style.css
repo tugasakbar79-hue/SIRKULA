@@ -263,37 +263,48 @@ footer{
     font-weight:bold;
 }
 
-
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
     header{
         padding:15px 20px;
+        position:relative;
     }
 
     .logo{
         font-size:22px;
     }
 
-    
     .menu-btn{
-    display:block;
-}
+        display:block;
+    }
 
-nav{
-    display:none;
-    position:absolute;
-    top:70px;
-    right:20px;
-    background:#fff;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    flex-direction:column;
-    width:180px;
-}
+    nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        width:200px;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:0 8px 20px rgba(0,0,0,.15);
+        flex-direction:column;
+        overflow:hidden;
+    }
 
-#menu-toggle:checked ~ nav{
-    display:flex;
-}
+    #menu-toggle:checked ~ nav{
+        display:flex;
+    }
+
+    nav a{
+        display:block;
+        margin:0;
+        padding:15px 20px;
+        border-bottom:1px solid #eee;
+    }
+
+    nav a:last-child{
+        border-bottom:none;
+    }
 
     .hero{
         padding:120px 20px 50px;
@@ -303,16 +314,11 @@ nav{
     .hero-logo{
         width:320px;
         max-width:95%;
-        height:auto;
-        display:block;
-        margin:0 auto 30px;
-        object-fit:contain;
     }
 
     .hero-subtitle{
         font-size:20px;
         padding:0 15px;
-        margin:15px 0 25px;
     }
 
     .btn{
